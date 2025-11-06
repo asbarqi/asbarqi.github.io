@@ -3,4 +3,4 @@
 pytest
 pytest-cov
 beautifulsoup4
-
+pandas
