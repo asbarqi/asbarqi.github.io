@@ -4,3 +4,8 @@ pytest
 pytest-cov
 beautifulsoup4
 pandas
+ipykernel
+plotly
+statsmodels
+
+jupyter-book
