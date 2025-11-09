@@ -7,5 +7,4 @@ pandas
 ipykernel
 plotly
 statsmodels
-
 jupyter-book
