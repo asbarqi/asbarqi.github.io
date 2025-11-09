@@ -1,0 +1,1269 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Ahmed&#39;s Portfolio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'test';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="lecture_19.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ahmed's Portfolio</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Ahmed’s Portfolio
+                </a>
+            </li>
+        </ul>
+        
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/test.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+
+requests = pd.read_csv(
+    &quot;/Users/Asbarqi/Documents/Semester 3/Computing in Context/311_requests_2018-19_sample.csv.zip&quot;
+)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/xs/_cbt3vps1db1zpklk6xw48jh0000gn/T/ipykernel_14698/2553642142.py:3: DtypeWarning: Columns (8,20,31,34) have mixed types. Specify dtype option on import or set low_memory=False.
+  requests = pd.read_csv(
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>requests[&quot;Complaint Type&quot;].value_counts().head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Complaint Type
+Noise - Residential                    41311
+HEAT/HOT WATER                         39095
+Illegal Parking                        34297
+Request Large Bulky Item Collection    30939
+Blocked Driveway                       25530
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>requests.groupby(&quot;Complaint Type&quot;).size().nlargest()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Complaint Type
+Noise - Residential                    41311
+HEAT/HOT WATER                         39095
+Illegal Parking                        34297
+Request Large Bulky Item Collection    30939
+Blocked Driveway                       25530
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>requests.groupby([&quot;Agency&quot;, &quot;Complaint Type&quot;]).size().to_frame(name=&quot;count&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>Agency</th>
+      <th>Complaint Type</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ACS</th>
+      <th>Forms</th>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>COIB</th>
+      <th>Forms</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">DCA</th>
+      <th>Consumer Complaint</th>
+      <td>2892</td>
+    </tr>
+    <tr>
+      <th>DCA / DOH New License Application Request</th>
+      <td>186</td>
+    </tr>
+    <tr>
+      <th>DCAS</th>
+      <th>Comments</th>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">TLC</th>
+      <th>Lost Property</th>
+      <td>472</td>
+    </tr>
+    <tr>
+      <th>Taxi Complaint</th>
+      <td>2416</td>
+    </tr>
+    <tr>
+      <th>Taxi Compliment</th>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>Taxi Licensee Complaint</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Taxi Report</th>
+      <td>318</td>
+    </tr>
+  </tbody>
+</table>
+<p>256 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>import numpy as np
+
+np.random.seed(5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>requests
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unique Key</th>
+      <th>Created Date</th>
+      <th>Closed Date</th>
+      <th>Agency</th>
+      <th>Agency Name</th>
+      <th>Complaint Type</th>
+      <th>Descriptor</th>
+      <th>Location Type</th>
+      <th>Incident Zip</th>
+      <th>Incident Address</th>
+      <th>...</th>
+      <th>Vehicle Type</th>
+      <th>Taxi Company Borough</th>
+      <th>Taxi Pick Up Location</th>
+      <th>Bridge Highway Name</th>
+      <th>Bridge Highway Direction</th>
+      <th>Road Ramp</th>
+      <th>Bridge Highway Segment</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>39885889</td>
+      <td>08/01/2018 12:05:13 AM</td>
+      <td>08/01/2018 12:05:13 AM</td>
+      <td>DOT</td>
+      <td>Department of Transportation</td>
+      <td>Street Condition</td>
+      <td>Pothole</td>
+      <td>NaN</td>
+      <td>11235</td>
+      <td>3143 SHORE PARKWAY</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.585156</td>
+      <td>-73.959119</td>
+      <td>(40.585155533520144, -73.95911915841708)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>39886470</td>
+      <td>08/01/2018 12:06:05 AM</td>
+      <td>08/01/2018 12:06:05 AM</td>
+      <td>DOT</td>
+      <td>Department of Transportation</td>
+      <td>Street Condition</td>
+      <td>Pothole</td>
+      <td>NaN</td>
+      <td>11235</td>
+      <td>3153 SHORE PARKWAY</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.585218</td>
+      <td>-73.958608</td>
+      <td>(40.58521848090658, -73.95860788382927)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>39893543</td>
+      <td>08/01/2018 12:06:16 AM</td>
+      <td>08/03/2018 02:03:55 PM</td>
+      <td>HPD</td>
+      <td>Department of Housing Preservation and Develop...</td>
+      <td>HEAT/HOT WATER</td>
+      <td>ENTIRE BUILDING</td>
+      <td>RESIDENTIAL BUILDING</td>
+      <td>11221</td>
+      <td>729 LAFAYETTE AVENUE</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.690733</td>
+      <td>-73.943964</td>
+      <td>(40.69073285353906, -73.943963521266)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>39886233</td>
+      <td>08/01/2018 12:06:29 AM</td>
+      <td>08/01/2018 02:54:24 AM</td>
+      <td>NYPD</td>
+      <td>New York City Police Department</td>
+      <td>Noise - Residential</td>
+      <td>Banging/Pounding</td>
+      <td>Residential Building/House</td>
+      <td>11693</td>
+      <td>82-01 BEACH CHANNEL DRIVE</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.589931</td>
+      <td>-73.808896</td>
+      <td>(40.58993080750793, -73.80889570815852)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>39880309</td>
+      <td>08/01/2018 12:06:51 AM</td>
+      <td>08/01/2018 04:54:26 AM</td>
+      <td>NYPD</td>
+      <td>New York City Police Department</td>
+      <td>Noise - Residential</td>
+      <td>Loud Music/Party</td>
+      <td>Residential Building/House</td>
+      <td>11216</td>
+      <td>64 HERKIMER STREET</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.679716</td>
+      <td>-73.951234</td>
+      <td>(40.67971590505359, -73.95123396494363)</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>499995</th>
+      <td>43622302</td>
+      <td>08/24/2019 01:46:09 AM</td>
+      <td>NaN</td>
+      <td>NYPD</td>
+      <td>New York City Police Department</td>
+      <td>Noise - Residential</td>
+      <td>Loud Music/Party</td>
+      <td>Residential Building/House</td>
+      <td>10009.0</td>
+      <td>431 EAST    9 STREET</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.727536</td>
+      <td>-73.983295</td>
+      <td>(40.72753608835362, -73.98329522742081)</td>
+    </tr>
+    <tr>
+      <th>499996</th>
+      <td>43619709</td>
+      <td>08/24/2019 01:49:49 AM</td>
+      <td>NaN</td>
+      <td>NYPD</td>
+      <td>New York City Police Department</td>
+      <td>Noise - Residential</td>
+      <td>Loud Music/Party</td>
+      <td>Residential Building/House</td>
+      <td>10304.0</td>
+      <td>191 BROAD STREET</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.624157</td>
+      <td>-74.081006</td>
+      <td>(40.62415703282506, -74.08100614362155)</td>
+    </tr>
+    <tr>
+      <th>499997</th>
+      <td>43623124</td>
+      <td>08/24/2019 01:56:35 AM</td>
+      <td>NaN</td>
+      <td>NYPD</td>
+      <td>New York City Police Department</td>
+      <td>Noise - Street/Sidewalk</td>
+      <td>Loud Music/Party</td>
+      <td>Street/Sidewalk</td>
+      <td>10031.0</td>
+      <td>534 WEST  153 STREET</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.830718</td>
+      <td>-73.945006</td>
+      <td>(40.83071800761314, -73.94500557250639)</td>
+    </tr>
+    <tr>
+      <th>499998</th>
+      <td>43625595</td>
+      <td>08/24/2019 01:56:40 AM</td>
+      <td>NaN</td>
+      <td>NYPD</td>
+      <td>New York City Police Department</td>
+      <td>Noise - Commercial</td>
+      <td>Loud Music/Party</td>
+      <td>Club/Bar/Restaurant</td>
+      <td>10452.0</td>
+      <td>EAST  170 STREET</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.839882</td>
+      <td>-73.916783</td>
+      <td>(40.839882158779105, -73.91678321635897)</td>
+    </tr>
+    <tr>
+      <th>499999</th>
+      <td>43622817</td>
+      <td>08/24/2019 01:57:58 AM</td>
+      <td>NaN</td>
+      <td>NYPD</td>
+      <td>New York City Police Department</td>
+      <td>Noise - Commercial</td>
+      <td>Loud Music/Party</td>
+      <td>Store/Commercial</td>
+      <td>10033.0</td>
+      <td>247 AUDUBON AVENUE</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.846376</td>
+      <td>-73.934048</td>
+      <td>(40.84637632367179, -73.93404825809533)</td>
+    </tr>
+  </tbody>
+</table>
+<p>500000 rows × 41 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>requests.head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unique Key</th>
+      <th>Created Date</th>
+      <th>Closed Date</th>
+      <th>Agency</th>
+      <th>Agency Name</th>
+      <th>Complaint Type</th>
+      <th>Descriptor</th>
+      <th>Location Type</th>
+      <th>Incident Zip</th>
+      <th>Incident Address</th>
+      <th>...</th>
+      <th>Vehicle Type</th>
+      <th>Taxi Company Borough</th>
+      <th>Taxi Pick Up Location</th>
+      <th>Bridge Highway Name</th>
+      <th>Bridge Highway Direction</th>
+      <th>Road Ramp</th>
+      <th>Bridge Highway Segment</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Location</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>39885889</td>
+      <td>08/01/2018 12:05:13 AM</td>
+      <td>08/01/2018 12:05:13 AM</td>
+      <td>DOT</td>
+      <td>Department of Transportation</td>
+      <td>Street Condition</td>
+      <td>Pothole</td>
+      <td>NaN</td>
+      <td>11235</td>
+      <td>3143 SHORE PARKWAY</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.585156</td>
+      <td>-73.959119</td>
+      <td>(40.585155533520144, -73.95911915841708)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>39886470</td>
+      <td>08/01/2018 12:06:05 AM</td>
+      <td>08/01/2018 12:06:05 AM</td>
+      <td>DOT</td>
+      <td>Department of Transportation</td>
+      <td>Street Condition</td>
+      <td>Pothole</td>
+      <td>NaN</td>
+      <td>11235</td>
+      <td>3153 SHORE PARKWAY</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.585218</td>
+      <td>-73.958608</td>
+      <td>(40.58521848090658, -73.95860788382927)</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>39893543</td>
+      <td>08/01/2018 12:06:16 AM</td>
+      <td>08/03/2018 02:03:55 PM</td>
+      <td>HPD</td>
+      <td>Department of Housing Preservation and Develop...</td>
+      <td>HEAT/HOT WATER</td>
+      <td>ENTIRE BUILDING</td>
+      <td>RESIDENTIAL BUILDING</td>
+      <td>11221</td>
+      <td>729 LAFAYETTE AVENUE</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.690733</td>
+      <td>-73.943964</td>
+      <td>(40.69073285353906, -73.943963521266)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>39886233</td>
+      <td>08/01/2018 12:06:29 AM</td>
+      <td>08/01/2018 02:54:24 AM</td>
+      <td>NYPD</td>
+      <td>New York City Police Department</td>
+      <td>Noise - Residential</td>
+      <td>Banging/Pounding</td>
+      <td>Residential Building/House</td>
+      <td>11693</td>
+      <td>82-01 BEACH CHANNEL DRIVE</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.589931</td>
+      <td>-73.808896</td>
+      <td>(40.58993080750793, -73.80889570815852)</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>39880309</td>
+      <td>08/01/2018 12:06:51 AM</td>
+      <td>08/01/2018 04:54:26 AM</td>
+      <td>NYPD</td>
+      <td>New York City Police Department</td>
+      <td>Noise - Residential</td>
+      <td>Loud Music/Party</td>
+      <td>Residential Building/House</td>
+      <td>11216</td>
+      <td>64 HERKIMER STREET</td>
+      <td>...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>40.679716</td>
+      <td>-73.951234</td>
+      <td>(40.67971590505359, -73.95123396494363)</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 41 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>requests.info()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 500000 entries, 0 to 499999
+Data columns (total 41 columns):
+ #   Column                          Non-Null Count   Dtype  
+---  ------                          --------------   -----  
+ 0   Unique Key                      500000 non-null  int64  
+ 1   Created Date                    500000 non-null  object 
+ 2   Closed Date                     476156 non-null  object 
+ 3   Agency                          500000 non-null  object 
+ 4   Agency Name                     500000 non-null  object 
+ 5   Complaint Type                  500000 non-null  object 
+ 6   Descriptor                      492534 non-null  object 
+ 7   Location Type                   392590 non-null  object 
+ 8   Incident Zip                    480411 non-null  object 
+ 9   Incident Address                434544 non-null  object 
+ 10  Street Name                     434519 non-null  object 
+ 11  Cross Street 1                  300838 non-null  object 
+ 12  Cross Street 2                  299635 non-null  object 
+ 13  Intersection Street 1           107383 non-null  object 
+ 14  Intersection Street 2           107048 non-null  object 
+ 15  Address Type                    451018 non-null  object 
+ 16  City                            476649 non-null  object 
+ 17  Landmark                        32521 non-null   object 
+ 18  Facility Type                   134923 non-null  object 
+ 19  Status                          500000 non-null  object 
+ 20  Due Date                        171559 non-null  object 
+ 21  Resolution Description          457389 non-null  object 
+ 22  Resolution Action Updated Date  488801 non-null  object 
+ 23  Community Board                 500000 non-null  object 
+ 24  BBL                             407355 non-null  float64
+ 25  Borough                         500000 non-null  object 
+ 26  X Coordinate (State Plane)      470830 non-null  float64
+ 27  Y Coordinate (State Plane)      470830 non-null  float64
+ 28  Open Data Channel Type          500000 non-null  object 
+ 29  Park Facility Name              499973 non-null  object 
+ 30  Park Borough                    500000 non-null  object 
+ 31  Vehicle Type                    37 non-null      object 
+ 32  Taxi Company Borough            403 non-null     object 
+ 33  Taxi Pick Up Location           4475 non-null    object 
+ 34  Bridge Highway Name             697 non-null     object 
+ 35  Bridge Highway Direction        766 non-null     object 
+ 36  Road Ramp                       759 non-null     object 
+ 37  Bridge Highway Segment          1027 non-null    object 
+ 38  Latitude                        470830 non-null  float64
+ 39  Longitude                       470830 non-null  float64
+ 40  Location                        470830 non-null  object 
+dtypes: float64(5), int64(1), object(35)
+memory usage: 156.4+ MB
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>requests.groupby(&quot;Complaint Type&quot;).size().nlargest()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Complaint Type
+Noise - Residential                    41311
+HEAT/HOT WATER                         39095
+Illegal Parking                        34297
+Request Large Bulky Item Collection    30939
+Blocked Driveway                       25530
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>pd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;module &#39;pandas&#39; from &#39;/Users/Asbarqi/Documents/Semester 3/Computing in Context/Lab/asbarqi.github.io/.venv/lib/python3.14/site-packages/pandas/__init__.py&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>requests.groupby([&quot;Agency&quot;, &quot;Complaint Type&quot;]).size().to_frame(name=&quot;count&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>Agency</th>
+      <th>Complaint Type</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ACS</th>
+      <th>Forms</th>
+      <td>56</td>
+    </tr>
+    <tr>
+      <th>COIB</th>
+      <th>Forms</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">DCA</th>
+      <th>Consumer Complaint</th>
+      <td>2892</td>
+    </tr>
+    <tr>
+      <th>DCA / DOH New License Application Request</th>
+      <td>186</td>
+    </tr>
+    <tr>
+      <th>DCAS</th>
+      <th>Comments</th>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th rowspan="5" valign="top">TLC</th>
+      <th>Lost Property</th>
+      <td>472</td>
+    </tr>
+    <tr>
+      <th>Taxi Complaint</th>
+      <td>2416</td>
+    </tr>
+    <tr>
+      <th>Taxi Compliment</th>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>Taxi Licensee Complaint</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Taxi Report</th>
+      <td>318</td>
+    </tr>
+  </tbody>
+</table>
+<p>256 rows × 1 columns</p>
+</div></div></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lecture_19.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahmed
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
