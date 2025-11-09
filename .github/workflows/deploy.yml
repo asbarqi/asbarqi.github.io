@@ -26,12 +26,13 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirement.txt
+          pip install jupyter-book
 
       - name: Build Jupyter Book
         run: |
           jupyter-book build .
 
-      - name: Upload built book to artifact
+      - name: Upload built book
         uses: actions/upload-pages-artifact@v3
         with:
           path: _build/html
