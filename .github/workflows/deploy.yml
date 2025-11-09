@@ -3,43 +3,43 @@ name: deploy-book
 on:
   push:
     branches:
-      - main     # deploy whenever you push to main
+      - main
 
 permissions:
+  contents: read
   pages: write
   id-token: write
 
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout your repository
-      - uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      # Set up Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: "3.11"  # stable version supported by Jupyter Book
-          cache: pip
+          python-version: "3.11"
 
-      # Install dependencies (Jupyter Book + anything in requirements.txt)
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
 
-      # Build your book
-      - name: Build the book
+      - name: Build Jupyter Book
         run: |
           jupyter-book build .
 
-      # Upload the generated HTML as an artifact
-      - name: Upload built HTML
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload built book to artifact
+        uses: actions/upload-pages-artifact@v3
         with:
           path: _build/html
 
-      # Deploy HTML to GitHub Pages
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
