@@ -2,5 +2,4 @@ format: jb-book
 root: index
 
 chapters:
-  - file: lecture_19
-  - file: test
+  - file: Project_1
