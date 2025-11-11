@@ -179,6 +179,7 @@
 
 
 
+
 </ul>
 
     </div>
@@ -335,6 +336,7 @@ document.write(`
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-1-using-pandas">Approach 1 - Using Pandas</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-2-using-python-standard-library">Approach 2 - Using Python Standard library</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">Data Visualization</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
 
             </nav>
@@ -349,7 +351,10 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="project-1">
 <h1>Project 1<a class="headerlink" href="#project-1" title="Link to this heading">#</a></h1>
-<p>In this project we will examine and analyze City’s budget data that is being spent  on salaries and overtime pay for all municipal employees. We will be conducting the analyses using both pandas, and python built-in library as requested. However, as a start, I will prep and clean the dataset first to make sure that everything is good to go</p>
+<p>In this project, I will examine and analyze New York City’s payroll expenditures on salary, overtime pay, and total compensation for municipal employees. The analysis is performed in two ways:</p>
+<p>Using pandas to efficiently compute results such as the mean, median, and mode.</p>
+<p>Using only Python’s built-in standard library to replicate those same calculations the “hard way,” without relying on pandas functions.</p>
+<p>Before performing the analysis, I begin with data preparation and cleaning to ensure that all values are correctly formatted and ready for computation. This includes selecting relevant columns, converting numeric fields, and verifying there are no missing or invalid entries.</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="initialization">
 <h1>Initialization<a class="headerlink" href="#initialization" title="Link to this heading">#</a></h1>
@@ -362,7 +367,7 @@ import pandas as pd
 </div>
 </div>
 </div>
-<p>Now we will use the published on NY Data Open for city government employees</p>
+<p>Now we will use the dataset published on NYC Open Data, which contains payroll information for New York City government employees.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>
@@ -568,7 +573,7 @@ memory usage: 6.5+ MB
 </div>
 </div>
 </div>
-<p>we can see that the data type is objects not float, so we need to change that</p>
+<p>From the summary above, we can see that the dataset does not contain missing values (non-null count looks complete). However, the compensation-related columns are stored as object (string) types rather than numeric. To perform calculations such as mean, median, or total compensation, we must first convert these columns into numeric (float) data types.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>df[&quot;regular_gross_paid&quot;] = pd.to_numeric(df[&quot;regular_gross_paid&quot;])
@@ -678,6 +683,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="approach-1-using-pandas">
 <h1>Approach 1 - Using Pandas<a class="headerlink" href="#approach-1-using-pandas" title="Link to this heading">#</a></h1>
+<p>we will use pandas to calculate the mean, median, and mode of the dataset. Pandas provides built-in functions that allow us to compute these statistics efficiently and directly from the dataset as shown below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span># Mean, median, mode using pandas
@@ -702,15 +708,16 @@ Mode: 99979.98999999999
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="approach-2-using-python-standard-library">
 <h1>Approach 2 - Using Python Standard library<a class="headerlink" href="#approach-2-using-python-standard-library" title="Link to this heading">#</a></h1>
+<p>Next, we will use only the Python standard library (the “hard way”) to manually calculate the same statistics (mean, median, and mode), without relying on pandas’ functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span># Convert the column to a list of floats
 values = df_filtered[&quot;total_compensation&quot;].tolist()
 
-# HARD WAY: Mean = sum / count
+# Mean = sum / count
 mean_hard = sum(values) / len(values)
 
-print(&quot;Mean (hard way):&quot;, mean_hard)
+print(&quot;Mean:&quot;, mean_hard)
 </pre></div>
 </div>
 </div>
@@ -731,12 +738,12 @@ if n % 2 == 1:
 else:
     median_hard = (sorted_values[n // 2 - 1] + sorted_values[n // 2]) / 2
 
-print(&quot;Median (hard way):&quot;, median_hard)
+print(&quot;Median:&quot;, median_hard)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Median (hard way): 69501.33
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Median: 69501.33
 </pre></div>
 </div>
 </div>
@@ -751,61 +758,55 @@ for value in values:
 # Return the key (value) with the highest frequency
 mode_hard = max(frequency, key=frequency.get)
 
-print(&quot;Mode (hard way):&quot;, mode_hard)
+print(&quot;Mode:&quot;, mode_hard)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mode (hard way): 99979.98999999999
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mode: 99979.98999999999
+</pre></div>
+</div>
+</div>
+</div>
+<p>Both approaches generate same results and good to go</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="data-visualization">
+<h1>Data Visualization<a class="headerlink" href="#data-visualization" title="Link to this heading">#</a></h1>
+<p>In this section, we want to visualize the average total compensation for employees in each borough. Instead of using external plotting libraries, we create a simple visual chart using stars (*). Each star represents a fixed dollar amount ($5,000) of average compensation. By comparing the number of stars across boroughs, we can easily see which boroughs have higher or lower average payroll spending.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>DOLLARS_PER_STAR = 5000
+
+borough_means = df_filtered.groupby(&quot;work_location_borough&quot;)[&quot;total_compensation&quot;].mean().round(2)
+
+print(&quot;\nAverage Total Compensation by Borough (Star Chart)&quot;)
+print(f&quot;(*) = ${DOLLARS_PER_STAR:,} of average compensation\n&quot;)
+
+for borough, avg_comp in borough_means.items():
+    num_stars = int(avg_comp // DOLLARS_PER_STAR)
+    bar = &quot;*&quot; * num_stars
+
+    print(f&quot;{borough:12} | {bar}   (${avg_comp:,.2f})&quot;)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Average Total Compensation by Borough (Star Chart)
+(*) = $5,000 of average compensation
+
+BRONX        | ************   ($63,471.88)
+BROOKLYN     | ************   ($64,457.63)
+MANHATTAN    | **************   ($73,608.46)
+QUEENS       | ************   ($60,595.31)
+RICHMOND     | *************   ($68,140.51)
 </pre></div>
 </div>
 </div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="data-visualization">
-<h1>Data Visualization<a class="headerlink" href="#data-visualization" title="Link to this heading">#</a></h1>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span># Create bins using pandas
-bins = df_filtered[&quot;total_compensation&quot;].value_counts(bins=10, sort=False)
-
-print(&quot;\nTotal Compensation Distribution (Scaled ASCII Chart w/ Minimum Bar)&quot;)
-print(&quot;█ = relative number of employees | · = no employees in this range\n&quot;)
-
-max_count = bins.max()
-max_bar_length = 35   # you can adjust this
-
-for interval, count in bins.items():
-    if count == 0:
-        bar = &quot;·&quot;   # zero values get a dot
-    else:
-        # proportional scaling
-        bar_length = int((count / max_count) * max_bar_length)
-        bar_length = max(bar_length, 1)  # ✅ ensure at least one symbol
-        bar = &quot;█&quot; * bar_length
-
-    print(f&quot;{str(interval):22} | {bar}&quot;)
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total Compensation Distribution (Scaled ASCII Chart w/ Minimum Bar)
-█ = relative number of employees | · = no employees in this range
-
-(-45441.534, 3268.088] | ████
-(3268.088, 51495.436]  | ███████████████
-(51495.436, 99722.784] | ███████████████████████████████████
-(99722.784, 147950.132] | ███████████
-(147950.132, 196177.48] | █
-(196177.48, 244404.828] | █
-(244404.828, 292632.176] | █
-(292632.176, 340859.524] | █
-(340859.524, 389086.872] | █
-(389086.872, 437314.22] | █
-</pre></div>
-</div>
-</div>
-</div>
+<section class="tex2jax_ignore mathjax_ignore" id="conclusion">
+<h1>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h1>
+<p>In this project, we cleaned NYC payroll data and calculated key statistics (mean, median, mode) using both pandas and pure Python. We then visualized borough-level compensation using a simple star chart, where each * represented a fixed dollar amount. Overall, the analysis highlights how compensation varies across boroughs and shows that we can explore and summarize real-world data using both built-in Python tools and pandas.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -871,6 +872,7 @@ for interval, count in bins.items():
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-1-using-pandas">Approach 1 - Using Pandas</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#approach-2-using-python-standard-library">Approach 2 - Using Python Standard library</a></li>
 <li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#data-visualization">Data Visualization</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
 
   </nav></div>
