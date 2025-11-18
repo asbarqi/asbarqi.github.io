@@ -1,0 +1,1361 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Step 0 &#8212; Ahmed&#39;s Portfolio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lab_11';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Project 1" href="Project_1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ahmed's Portfolio</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Ahmed’s Portfolio
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Project_1.html">Project 1</a></li>
+
+
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Step 0</a></li>
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/lab_11.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Step 0</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Step 0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">Step 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">Step 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">Step 3</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="step-0">
+<h1>Step 0<a class="headerlink" href="#step-0" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+
+url = &quot;https://data.cityofnewyork.us/resource/xi7c-iiu2.csv&quot;
+pop_by_cd = pd.read_csv(url)
+pop_by_cd
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>borough</th>
+      <th>cd_number</th>
+      <th>cd_name</th>
+      <th>_1970_population</th>
+      <th>_1980_population</th>
+      <th>_1990_population</th>
+      <th>_2000_population</th>
+      <th>_2010_population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Bronx</td>
+      <td>1</td>
+      <td>Melrose, Mott Haven, Port Morris</td>
+      <td>138557</td>
+      <td>78441</td>
+      <td>77214</td>
+      <td>82159</td>
+      <td>91497</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Bronx</td>
+      <td>2</td>
+      <td>Hunts Point, Longwood</td>
+      <td>99493</td>
+      <td>34399</td>
+      <td>39443</td>
+      <td>46824</td>
+      <td>52246</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Bronx</td>
+      <td>3</td>
+      <td>Morrisania, Crotona Park East</td>
+      <td>150636</td>
+      <td>53635</td>
+      <td>57162</td>
+      <td>68574</td>
+      <td>79762</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bronx</td>
+      <td>4</td>
+      <td>Highbridge, Concourse Village</td>
+      <td>144207</td>
+      <td>114312</td>
+      <td>119962</td>
+      <td>139563</td>
+      <td>146441</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Bronx</td>
+      <td>5</td>
+      <td>University Hts., Fordham, Mt. Hope</td>
+      <td>121807</td>
+      <td>107995</td>
+      <td>118435</td>
+      <td>128313</td>
+      <td>128200</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Bronx</td>
+      <td>6</td>
+      <td>East Tremont, Belmont</td>
+      <td>114137</td>
+      <td>65016</td>
+      <td>68061</td>
+      <td>75688</td>
+      <td>83268</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Bronx</td>
+      <td>7</td>
+      <td>Bedford Park, Norwood, Fordham</td>
+      <td>113764</td>
+      <td>116827</td>
+      <td>128588</td>
+      <td>141411</td>
+      <td>139286</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Bronx</td>
+      <td>8</td>
+      <td>Riverdale, Kingsbridge, Marble Hill</td>
+      <td>103543</td>
+      <td>98275</td>
+      <td>97030</td>
+      <td>101332</td>
+      <td>101731</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Bronx</td>
+      <td>9</td>
+      <td>Soundview, Parkchester</td>
+      <td>166442</td>
+      <td>167627</td>
+      <td>155970</td>
+      <td>167859</td>
+      <td>172298</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Bronx</td>
+      <td>10</td>
+      <td>Throgs Nk., Co-op City, Pelham Bay</td>
+      <td>84948</td>
+      <td>106516</td>
+      <td>108093</td>
+      <td>115948</td>
+      <td>120392</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Bronx</td>
+      <td>11</td>
+      <td>Pelham Pkwy, Morris Park, Laconia</td>
+      <td>105980</td>
+      <td>99080</td>
+      <td>97842</td>
+      <td>110706</td>
+      <td>113232</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Bronx</td>
+      <td>12</td>
+      <td>Wakefield, Williamsbridge</td>
+      <td>135010</td>
+      <td>128226</td>
+      <td>129620</td>
+      <td>149077</td>
+      <td>152344</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Brooklyn</td>
+      <td>1</td>
+      <td>Williamsburg, Greenpoint</td>
+      <td>179390</td>
+      <td>142942</td>
+      <td>155972</td>
+      <td>160338</td>
+      <td>173083</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Brooklyn</td>
+      <td>2</td>
+      <td>Brooklyn Heights, Fort Greene</td>
+      <td>110221</td>
+      <td>92732</td>
+      <td>94534</td>
+      <td>98620</td>
+      <td>99617</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Brooklyn</td>
+      <td>3</td>
+      <td>Bedford Stuyvesant</td>
+      <td>203380</td>
+      <td>133379</td>
+      <td>138696</td>
+      <td>143867</td>
+      <td>152985</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Brooklyn</td>
+      <td>4</td>
+      <td>Bushwick</td>
+      <td>137902</td>
+      <td>92497</td>
+      <td>102572</td>
+      <td>104358</td>
+      <td>112634</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Brooklyn</td>
+      <td>5</td>
+      <td>East New York, Starrett City</td>
+      <td>170791</td>
+      <td>154931</td>
+      <td>161350</td>
+      <td>173198</td>
+      <td>182896</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Brooklyn</td>
+      <td>6</td>
+      <td>Park Slope, Carroll Gardens</td>
+      <td>138933</td>
+      <td>110228</td>
+      <td>102724</td>
+      <td>104054</td>
+      <td>104709</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Brooklyn</td>
+      <td>7</td>
+      <td>Sunset Park, Windsor Terrace</td>
+      <td>111607</td>
+      <td>98567</td>
+      <td>102553</td>
+      <td>120063</td>
+      <td>126230</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Brooklyn</td>
+      <td>8</td>
+      <td>Crown Heights North</td>
+      <td>121821</td>
+      <td>88796</td>
+      <td>96400</td>
+      <td>96076</td>
+      <td>96317</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Brooklyn</td>
+      <td>9</td>
+      <td>Crown Heights South, Wingate</td>
+      <td>101047</td>
+      <td>96669</td>
+      <td>110715</td>
+      <td>104014</td>
+      <td>98429</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Brooklyn</td>
+      <td>10</td>
+      <td>Bay Ridge, Dyker Heights</td>
+      <td>129822</td>
+      <td>118187</td>
+      <td>110612</td>
+      <td>122542</td>
+      <td>124491</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Brooklyn</td>
+      <td>11</td>
+      <td>Bensonhurst, Bath Beach</td>
+      <td>170119</td>
+      <td>155072</td>
+      <td>149994</td>
+      <td>172129</td>
+      <td>181981</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Brooklyn</td>
+      <td>12</td>
+      <td>Borough Park, Ocean Parkway</td>
+      <td>166301</td>
+      <td>155899</td>
+      <td>160018</td>
+      <td>185046</td>
+      <td>191382</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Brooklyn</td>
+      <td>13</td>
+      <td>Coney Island, Brighton Beach</td>
+      <td>97750</td>
+      <td>100030</td>
+      <td>102596</td>
+      <td>106120</td>
+      <td>104278</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Brooklyn</td>
+      <td>14</td>
+      <td>Flatbush, Midwood</td>
+      <td>137041</td>
+      <td>143859</td>
+      <td>159825</td>
+      <td>168806</td>
+      <td>160664</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Brooklyn</td>
+      <td>15</td>
+      <td>Sheepshead Bay, Gerritsen Beach</td>
+      <td>164815</td>
+      <td>149572</td>
+      <td>143477</td>
+      <td>160319</td>
+      <td>159650</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Brooklyn</td>
+      <td>16</td>
+      <td>Brownsville, Ocean Hill</td>
+      <td>122589</td>
+      <td>73801</td>
+      <td>84923</td>
+      <td>85343</td>
+      <td>86468</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Brooklyn</td>
+      <td>17</td>
+      <td>East Flatbush, Rugby, Farragut</td>
+      <td>149496</td>
+      <td>154596</td>
+      <td>161261</td>
+      <td>165753</td>
+      <td>155252</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Brooklyn</td>
+      <td>18</td>
+      <td>Canarsie, Flatlands</td>
+      <td>188643</td>
+      <td>169092</td>
+      <td>162428</td>
+      <td>194653</td>
+      <td>193543</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Manhattan</td>
+      <td>1</td>
+      <td>Battery Park City, Tribeca</td>
+      <td>7706</td>
+      <td>15918</td>
+      <td>25366</td>
+      <td>34420</td>
+      <td>60978</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Manhattan</td>
+      <td>2</td>
+      <td>Greenwich Village, Soho</td>
+      <td>84337</td>
+      <td>87069</td>
+      <td>94105</td>
+      <td>93119</td>
+      <td>90016</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Manhattan</td>
+      <td>3</td>
+      <td>Lower East Side, Chinatown</td>
+      <td>181845</td>
+      <td>154848</td>
+      <td>161617</td>
+      <td>164407</td>
+      <td>163277</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Manhattan</td>
+      <td>4</td>
+      <td>Chelsea, Clinton</td>
+      <td>83601</td>
+      <td>82164</td>
+      <td>84431</td>
+      <td>87479</td>
+      <td>103245</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Manhattan</td>
+      <td>5</td>
+      <td>Midtown Business District</td>
+      <td>31076</td>
+      <td>39544</td>
+      <td>43507</td>
+      <td>44028</td>
+      <td>51673</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Manhattan</td>
+      <td>6</td>
+      <td>Stuyvesant Town, Turtle Bay</td>
+      <td>122465</td>
+      <td>127554</td>
+      <td>133748</td>
+      <td>136152</td>
+      <td>142745</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Manhattan</td>
+      <td>7</td>
+      <td>West Side, Upper West Side</td>
+      <td>212422</td>
+      <td>206669</td>
+      <td>210993</td>
+      <td>207699</td>
+      <td>209084</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Manhattan</td>
+      <td>8</td>
+      <td>Upper East Side</td>
+      <td>200851</td>
+      <td>204305</td>
+      <td>210880</td>
+      <td>217063</td>
+      <td>219920</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Manhattan</td>
+      <td>9</td>
+      <td>Manhattanville, Hamilton Heights</td>
+      <td>113606</td>
+      <td>103038</td>
+      <td>106978</td>
+      <td>111724</td>
+      <td>110193</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Manhattan</td>
+      <td>10</td>
+      <td>Central Harlem</td>
+      <td>159267</td>
+      <td>105641</td>
+      <td>99519</td>
+      <td>107109</td>
+      <td>115723</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Manhattan</td>
+      <td>11</td>
+      <td>East Harlem</td>
+      <td>154662</td>
+      <td>114569</td>
+      <td>110508</td>
+      <td>117743</td>
+      <td>120511</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>Manhattan</td>
+      <td>12</td>
+      <td>Washington Heights, Inwood</td>
+      <td>180561</td>
+      <td>179941</td>
+      <td>198192</td>
+      <td>208414</td>
+      <td>190020</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>Queens</td>
+      <td>1</td>
+      <td>Astoria, Long Island City</td>
+      <td>185925</td>
+      <td>185198</td>
+      <td>188549</td>
+      <td>211220</td>
+      <td>191105</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Queens</td>
+      <td>2</td>
+      <td>Sunnyside, Woodside</td>
+      <td>95073</td>
+      <td>88927</td>
+      <td>94845</td>
+      <td>109920</td>
+      <td>113200</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Queens</td>
+      <td>3</td>
+      <td>Jackson Heights, North Corona</td>
+      <td>123635</td>
+      <td>122090</td>
+      <td>128924</td>
+      <td>169083</td>
+      <td>171576</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>Queens</td>
+      <td>4</td>
+      <td>Elmhurst, South Corona</td>
+      <td>108233</td>
+      <td>118430</td>
+      <td>137023</td>
+      <td>167005</td>
+      <td>172598</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>Queens</td>
+      <td>5</td>
+      <td>Ridgewood, Glendale, Maspeth</td>
+      <td>161022</td>
+      <td>150142</td>
+      <td>149126</td>
+      <td>165911</td>
+      <td>169190</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>Queens</td>
+      <td>6</td>
+      <td>Forest Hills, Rego Park</td>
+      <td>120429</td>
+      <td>112245</td>
+      <td>106996</td>
+      <td>115967</td>
+      <td>113257</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Queens</td>
+      <td>7</td>
+      <td>Flushing, Bay Terrace</td>
+      <td>207589</td>
+      <td>204785</td>
+      <td>220508</td>
+      <td>242952</td>
+      <td>247354</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Queens</td>
+      <td>8</td>
+      <td>Fresh Meadows, Briarwood</td>
+      <td>142468</td>
+      <td>125312</td>
+      <td>132101</td>
+      <td>146594</td>
+      <td>151107</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Queens</td>
+      <td>9</td>
+      <td>Woodhaven, Richmond Hill</td>
+      <td>110367</td>
+      <td>109505</td>
+      <td>112151</td>
+      <td>141608</td>
+      <td>143317</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Queens</td>
+      <td>10</td>
+      <td>Ozone Park, Howard Beach</td>
+      <td>113857</td>
+      <td>105651</td>
+      <td>107768</td>
+      <td>127274</td>
+      <td>122396</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>Queens</td>
+      <td>11</td>
+      <td>Bayside, Douglaston, Little Neck</td>
+      <td>127883</td>
+      <td>110963</td>
+      <td>108056</td>
+      <td>116404</td>
+      <td>116431</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>Queens</td>
+      <td>12</td>
+      <td>Jamaica, St. Albans, Hollis</td>
+      <td>206639</td>
+      <td>189383</td>
+      <td>201293</td>
+      <td>223602</td>
+      <td>225919</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>Queens</td>
+      <td>13</td>
+      <td>Queens Village, Rosedale</td>
+      <td>184647</td>
+      <td>173178</td>
+      <td>177535</td>
+      <td>196284</td>
+      <td>188593</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>Queens</td>
+      <td>14</td>
+      <td>The Rockaways, Broad Channel</td>
+      <td>98228</td>
+      <td>100592</td>
+      <td>100596</td>
+      <td>106686</td>
+      <td>114978</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>Staten Island</td>
+      <td>1</td>
+      <td>Stapleton, Port Richmond</td>
+      <td>135875</td>
+      <td>138489</td>
+      <td>137806</td>
+      <td>162609</td>
+      <td>175756</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>Staten Island</td>
+      <td>2</td>
+      <td>New Springville, South Beach</td>
+      <td>85985</td>
+      <td>105128</td>
+      <td>113944</td>
+      <td>127071</td>
+      <td>132003</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>Staten Island</td>
+      <td>3</td>
+      <td>Tottenville, Woodrow, Great Kills</td>
+      <td>72815</td>
+      <td>108249</td>
+      <td>126956</td>
+      <td>152908</td>
+      <td>160209</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-1">
+<h1>Step 1<a class="headerlink" href="#step-1" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span># turn the population columns into rows
+populations = pd.melt(
+    pop_by_cd,
+    id_vars=[&quot;borough&quot;, &quot;cd_number&quot;, &quot;cd_name&quot;],
+    var_name=&quot;year&quot;,
+    value_name=&quot;population&quot;,
+)
+
+populations[&quot;year&quot;] = populations[&quot;year&quot;].str.extract(r&quot;(\d{4})&quot;).astype(int)
+
+populations
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>borough</th>
+      <th>cd_number</th>
+      <th>cd_name</th>
+      <th>year</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Bronx</td>
+      <td>1</td>
+      <td>Melrose, Mott Haven, Port Morris</td>
+      <td>1970</td>
+      <td>138557</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Bronx</td>
+      <td>2</td>
+      <td>Hunts Point, Longwood</td>
+      <td>1970</td>
+      <td>99493</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Bronx</td>
+      <td>3</td>
+      <td>Morrisania, Crotona Park East</td>
+      <td>1970</td>
+      <td>150636</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bronx</td>
+      <td>4</td>
+      <td>Highbridge, Concourse Village</td>
+      <td>1970</td>
+      <td>144207</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Bronx</td>
+      <td>5</td>
+      <td>University Hts., Fordham, Mt. Hope</td>
+      <td>1970</td>
+      <td>121807</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>290</th>
+      <td>Queens</td>
+      <td>13</td>
+      <td>Queens Village, Rosedale</td>
+      <td>2010</td>
+      <td>188593</td>
+    </tr>
+    <tr>
+      <th>291</th>
+      <td>Queens</td>
+      <td>14</td>
+      <td>The Rockaways, Broad Channel</td>
+      <td>2010</td>
+      <td>114978</td>
+    </tr>
+    <tr>
+      <th>292</th>
+      <td>Staten Island</td>
+      <td>1</td>
+      <td>Stapleton, Port Richmond</td>
+      <td>2010</td>
+      <td>175756</td>
+    </tr>
+    <tr>
+      <th>293</th>
+      <td>Staten Island</td>
+      <td>2</td>
+      <td>New Springville, South Beach</td>
+      <td>2010</td>
+      <td>132003</td>
+    </tr>
+    <tr>
+      <th>294</th>
+      <td>Staten Island</td>
+      <td>3</td>
+      <td>Tottenville, Woodrow, Great Kills</td>
+      <td>2010</td>
+      <td>160209</td>
+    </tr>
+  </tbody>
+</table>
+<p>295 rows × 5 columns</p>
+</div></div></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-2">
+<h1>Step 2<a class="headerlink" href="#step-2" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
+
+# create one line per CD
+plt.figure(figsize=(12, 6))
+
+for cd, group in populations.groupby(&quot;cd_name&quot;):
+    plt.plot(group[&quot;year&quot;], group[&quot;population&quot;], label=cd)
+
+plt.title(&quot;Population Over Time by Community District&quot;)
+plt.xlabel(&quot;Year&quot;)
+plt.ylabel(&quot;Population&quot;)
+plt.legend(bbox_to_anchor=(1.05, 1), loc=&#39;upper left&#39;)  # puts legend outside
+plt.tight_layout()
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/xs/_cbt3vps1db1zpklk6xw48jh0000gn/T/ipykernel_23942/3789523825.py:13: UserWarning: Tight layout not applied. The bottom and top margins cannot be made large enough to accommodate all Axes decorations.
+  plt.tight_layout()
+</pre></div>
+</div>
+<img alt="_images/d70cf580b11ebdbbe011acb8439071554ff90e6901c05ec33b489003c4fccafe.png" src="_images/d70cf580b11ebdbbe011acb8439071554ff90e6901c05ec33b489003c4fccafe.png" />
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="step-3">
+<h1>Step 3<a class="headerlink" href="#step-3" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>borough_pop = (
+    populations
+    .groupby([&quot;borough&quot;, &quot;year&quot;])[&quot;population&quot;]
+    .sum()
+    .reset_index()
+)
+
+plt.figure(figsize=(12, 6))
+
+for borough, group in borough_pop.groupby(&quot;borough&quot;):
+    plt.plot(group[&quot;year&quot;], group[&quot;population&quot;], label=borough)
+
+plt.title(&quot;Population Over Time by Borough&quot;)
+plt.xlabel(&quot;Year&quot;)
+plt.ylabel(&quot;Total Population&quot;)
+plt.legend(title=&quot;Borough&quot;)
+plt.tight_layout()
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/3029df30878f3f1e4d078175a0fc2562a11ccc4b7fa1606a421918945254a6eb.png" src="_images/3029df30878f3f1e4d078175a0fc2562a11ccc4b7fa1606a421918945254a6eb.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Project_1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Project 1</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Step 0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1">Step 1</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2">Step 2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3">Step 3</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahmed
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
