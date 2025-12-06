@@ -1,0 +1,889 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Project 3 &#8212; Ahmed&#39;s Portfolio</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Project_3';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.7/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Project 2" href="Project_2.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Ahmed's Portfolio</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="index.html">
+                    Ahmed’s Portfolio
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Project_1.html">Project 1</a></li>
+
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Project_2.html">Project 2</a></li>
+
+
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Project 3</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Project_3.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Project 3</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-prompt">Project Prompt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-packages-and-import-data">Load Packages and Import Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning-and-preparation">Data Cleaning and Preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-housing-costs-and-homelessness-trends">Visualizing Housing Costs and Homelessness Trends</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-results">Interpretation of Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-model-interpretation">Regression Model interpretation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-of-the-model">Limitations of the Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="project-3">
+<h1>Project 3<a class="headerlink" href="#project-3" title="Link to this heading">#</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
+<p>Housing affordability is one of the most pressing challenges facing New York City. In recent years, both rental prices and homelessness rates have increased, raising important policy questions about whether rising housing costs contribute to shelter entry.</p>
+<p>This project examines the association between median asking rents and the NYC homeless shelter census over time. Using two publicly available datasets from the DHS Daily Shelter Census and Streeteasy city-wide median rent data, I analyze whether increases in rent are associated with changes in the number of individuals in shelter.</p>
+<p>This analysis involves cleaning and transforming two datasets, aggregating rent and shelter data to the monthly level, merging them into a single dataset, and visualizing trends and relationships. The goal is not to claim causality, but to explore whether a clear association emerges between rising housing prices and homelessness in NYC.</p>
+</section>
+<section id="project-prompt">
+<h2>Project Prompt<a class="headerlink" href="#project-prompt" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Dataset(s) to be used:</strong></p>
+<ul>
+<li><p>NYC DHS Daily Shelter Census: <a class="reference external" href="https://data.cityofnewyork.us/api/views/k46n-sa2m/rows.csv?accessType=DOWNLOAD">https://data.cityofnewyork.us/api/views/k46n-sa2m/rows.csv?accessType=DOWNLOAD</a></p></li>
+<li><p>NYC Median Asking Rent (StreetEasy): <a class="reference external" href="https://cdn-charts.streeteasy.com/rentals/All/medianAskingRent_All.zip?_ga=2.152550206.667835091.1764904632-1105379344.1764904632">https://cdn-charts.streeteasy.com/rentals/All/medianAskingRent_All.zip?_ga=2.152550206.667835091.1764904632-1105379344.1764904632</a></p></li>
+</ul>
+</li>
+<li><p><strong>Analysis question:</strong>
+How does the trend in median asking rent in New York City relate to the trend in the city’s homeless shelter population over time?</p></li>
+<li><p><strong>Columns that will (likely) be used:</strong></p>
+<ul>
+<li><p><em>From DHS Shelter Census:</em></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">of</span> <span class="pre">Census</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Total</span> <span class="pre">Individuals</span> <span class="pre">in</span> <span class="pre">Shelter</span></code></p></li>
+</ul>
+</li>
+<li><p><em>From Median Rent dataset:</em></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">areaName</span></code></p></li>
+<li><p>Monthly rent columns (to be reshaped into a <code class="docutils literal notranslate"><span class="pre">month</span></code> column)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">median_rent</span></code></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Columns to be used to merge/join the datasets:</strong></p>
+<ul>
+<li><p>DHS dataset: <code class="docutils literal notranslate"><span class="pre">month</span></code> (derived from <code class="docutils literal notranslate"><span class="pre">Date</span> <span class="pre">of</span> <span class="pre">Census</span></code>)</p></li>
+<li><p>Rent dataset: <code class="docutils literal notranslate"><span class="pre">month</span></code> (converted from <code class="docutils literal notranslate"><span class="pre">YYYY-MM</span></code> column names)</p></li>
+</ul>
+</li>
+<li><p><strong>Hypothesis:</strong>
+Increases in median rent are associated with increases in the NYC homeless shelter population, reflecting affordability pressures that make it more difficult for households to remain housed.</p></li>
+</ul>
+</section>
+<section id="load-packages-and-import-data">
+<h2>Load Packages and Import Data<a class="headerlink" href="#load-packages-and-import-data" title="Link to this heading">#</a></h2>
+<p>In this section, I load the housing and homelessness datasets from local CSV files. The median rent data (<code class="docutils literal notranslate"><span class="pre">medianAskingRent_All.csv</span></code>) contains New York City–level median asking rents with one column per month (formatted as <code class="docutils literal notranslate"><span class="pre">YYYY-MM</span></code>). The DHS shelter census file (<code class="docutils literal notranslate"><span class="pre">DHS_Homeless_Shelter_Census_20251204.csv</span></code>) contains daily counts of the total number of individuals in NYC homeless shelters.</p>
+<p>In the next section, I will reshape the rent data into a long format, convert dates, aggregate the shelter data to monthly averages, and merge the two datasets by month.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import statsmodels.api as sm
+# Make plots display nicely
+plt.style.use(&quot;default&quot;)
+
+
+# URLs
+url_shelter = &quot;https://data.cityofnewyork.us/api/views/k46n-sa2m/rows.csv?accessType=DOWNLOAD&quot;
+url_rent = &quot;https://cdn-charts.streeteasy.com/rentals/All/medianAskingRent_All.zip?_ga=2.152550206.667835091.1764904632-1105379344.1764904632&quot;
+
+# Load data
+shelter_raw = pd.read_csv(url_shelter)
+rent_raw = pd.read_csv(url_rent, compression=&quot;zip&quot;)
+
+# Preview
+shelter_raw.head(), rent_raw.head()
+
+# Quick look at the data
+rent_raw.head(), shelter_raw.head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(              areaName    Borough   areaType  2010-01  2010-02  2010-03  \
+ 0         All Downtown  Manhattan  submarket   3200.0   3200.0   3015.0   
+ 1          All Midtown  Manhattan  submarket   2875.0   2800.0   2800.0   
+ 2  All Upper East Side  Manhattan  submarket   2450.0   2450.0   2400.0   
+ 3  All Upper Manhattan  Manhattan  submarket   1825.0   1800.0   1795.0   
+ 4  All Upper West Side  Manhattan  submarket   2895.0   2800.0   2750.0   
+ 
+    2010-04  2010-05  2010-06  2010-07  ...  2025-02  2025-03  2025-04  \
+ 0   3100.0   3100.0   3200.0   3195.0  ...   5028.0   5000.0   5195.0   
+ 1   2850.0   2895.0   2950.0   3000.0  ...   4595.0   4595.0   4695.0   
+ 2   2500.0   2565.0   2570.0   2595.0  ...   3999.0   3995.0   4000.0   
+ 3   1800.0   1823.0   1850.0   1875.0  ...   2877.0   2900.0   3000.0   
+ 4   2800.0   2800.0   2795.0   2800.0  ...   4450.0   4500.0   4500.0   
+ 
+    2025-05  2025-06  2025-07  2025-08  2025-09  2025-10  2025-11  
+ 0   5250.0   5304.0   5450.0   5421.0   5350.0   5345.0   5350.0  
+ 1   4750.0   4850.0   4873.0   4800.0   4750.0   4695.0   4638.0  
+ 2   4150.0   4200.0   4200.0   4200.0   4200.0   4150.0   4250.0  
+ 3   3195.0   3243.0   3299.0   3225.0   3200.0   3190.0   3125.0  
+ 4   4500.0   4710.0   4795.0   4800.0   4800.0   4800.0   4800.0  
+ 
+ [5 rows x 194 columns],
+   Date of Census  Total Adults in Shelter  Total Children in Shelter  \
+ 0     07/19/2023                    53797                      28209   
+ 1     07/20/2023                    53891                      28225   
+ 2     07/21/2023                    53851                      28270   
+ 3     07/22/2023                    53762                      28324   
+ 4     07/23/2023                    53801                      28269   
+ 
+    Total Individuals in Shelter  Single Adult Men in Shelter  \
+ 0                         82006                        16905   
+ 1                         82116                        16943   
+ 2                         82121                        16962   
+ 3                         82086                        16891   
+ 4                         82070                        16971   
+ 
+    Single Adult Women in Shelter  Total Single Adults in Shelter  \
+ 0                           4784                           21689   
+ 1                           4794                           21737   
+ 2                           4752                           21714   
+ 3                           4713                           21604   
+ 4                           4710                           21681   
+ 
+    Families with Children in Shelter  \
+ 0                              16491   
+ 1                              16513   
+ 2                              16527   
+ 3                              16544   
+ 4                              16522   
+ 
+    Adults in Families with Children in Shelter  \
+ 0                                        25913   
+ 1                                        25940   
+ 2                                        25953   
+ 3                                        25970   
+ 4                                        25948   
+ 
+    Children in Families with Children in Shelter  \
+ 0                                          28209   
+ 1                                          28225   
+ 2                                          28270   
+ 3                                          28324   
+ 4                                          28269   
+ 
+    Total Individuals in Families with Children in Shelter   \
+ 0                                              54122         
+ 1                                              54165         
+ 2                                              54223         
+ 3                                              54294         
+ 4                                              54217         
+ 
+    Adult Families in Shelter  Individuals in Adult Families in Shelter  
+ 0                       2916                                      6195  
+ 1                       2925                                      6214  
+ 2                       2910                                      6184  
+ 3                       2912                                      6188  
+ 4                       2904                                      6172  )
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-cleaning-and-preparation">
+<h2>Data Cleaning and Preparation<a class="headerlink" href="#data-cleaning-and-preparation" title="Link to this heading">#</a></h2>
+<p>This section prepares both datasets so they can be analyzed together on a common monthly basis.</p>
+<ol class="arabic simple">
+<li><p><strong>Median Rent Data (citywide NYC)</strong></p>
+<ul class="simple">
+<li><p>Keep only the row corresponding to New York City (where <code class="docutils literal notranslate"><span class="pre">areaName</span></code> is “NYC”).</p></li>
+<li><p>Pivot the monthly columns (named in the format <code class="docutils literal notranslate"><span class="pre">YYYY-MM</span></code>) into a long format with two columns: <code class="docutils literal notranslate"><span class="pre">month</span></code> and <code class="docutils literal notranslate"><span class="pre">median_rent</span></code>.</p></li>
+<li><p>Convert <code class="docutils literal notranslate"><span class="pre">month</span></code> into a proper date (using the first day of each month, e.g., <code class="docutils literal notranslate"><span class="pre">2021-03-01</span></code>).</p></li>
+<li><p>Ensure <code class="docutils literal notranslate"><span class="pre">median_rent</span></code> is numeric.</p></li>
+<li><p>Drop geographic identifier columns (<code class="docutils literal notranslate"><span class="pre">Borough</span></code>, <code class="docutils literal notranslate"><span class="pre">areaType</span></code>, <code class="docutils literal notranslate"><span class="pre">areaName</span></code>) that are no longer needed.</p></li>
+</ul>
+</li>
+<li><p><strong>Shelter Census Data (citywide NYC)</strong></p>
+<ul class="simple">
+<li><p>Select the date of census and total individuals in shelter.</p></li>
+<li><p>Convert the census date to a proper date type.</p></li>
+<li><p>Create a <code class="docutils literal notranslate"><span class="pre">month</span></code> variable by flooring each date to the first day of the month.</p></li>
+<li><p>Group by <code class="docutils literal notranslate"><span class="pre">month</span></code> and compute the <strong>average number of individuals in shelter per month</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Joined Dataset</strong></p>
+<ul class="simple">
+<li><p>Merge the long-format rent data and the monthly shelter averages by <code class="docutils literal notranslate"><span class="pre">month</span></code> using a left join.</p></li>
+<li><p>Sort the resulting dataset chronologically.</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span># Prepare median rent data
+
+# Keep only NYC row (areaName == &quot;NYC&quot;)
+rent_nyc = rent_raw[rent_raw[&quot;areaName&quot;].isin([&quot;NYC&quot;])].copy()
+
+# Identify columns that look like YYYY-MM (monthly columns)
+month_cols = rent_nyc.columns[rent_nyc.columns.str.match(r&quot;^\d{4}-\d{2}$&quot;)]
+
+# Pivot monthly columns into long format: month, median_rent
+rent_long = rent_nyc.melt(
+    id_vars=[&quot;Borough&quot;, &quot;areaType&quot;, &quot;areaName&quot;],
+    value_vars=month_cols,
+    var_name=&quot;month&quot;,
+    value_name=&quot;median_rent&quot;
+)
+
+# Convert month to proper datetime (YYYY-MM-01) and median_rent to numeric
+rent_long[&quot;month&quot;] = pd.to_datetime(rent_long[&quot;month&quot;] + &quot;-01&quot;)
+rent_long[&quot;median_rent&quot;] = pd.to_numeric(rent_long[&quot;median_rent&quot;], errors=&quot;coerce&quot;)
+
+# Drop geographic columns no longer needed (exactly as in the R code)
+rent_long = rent_long.drop(columns=[&quot;Borough&quot;, &quot;areaType&quot;, &quot;areaName&quot;])
+
+# Prepare shelter data (monthly averages)
+
+shelter = shelter_raw.rename(
+    columns={
+        &quot;Date of Census&quot;: &quot;date&quot;,
+        &quot;Total Individuals in Shelter&quot;: &quot;total_shelter&quot;
+    }
+)
+
+# Convert date to datetime
+shelter[&quot;date&quot;] = pd.to_datetime(shelter[&quot;date&quot;])
+
+# Create a month column by flooring to the first day of each month
+shelter[&quot;month&quot;] = shelter[&quot;date&quot;].dt.to_period(&quot;M&quot;).dt.to_timestamp()
+
+# Group by month and compute average shelter population (total_shelter_avg)
+shelter_monthly = (
+    shelter.groupby(&quot;month&quot;, as_index=False)[&quot;total_shelter&quot;]
+           .mean()
+           .rename(columns={&quot;total_shelter&quot;: &quot;total_shelter_avg&quot;})
+)
+
+# Join rent and shelter data by month
+
+df_joined = (
+    rent_long
+    .merge(shelter_monthly, on=&quot;month&quot;, how=&quot;left&quot;)
+    .sort_values(&quot;month&quot;)
+)
+df_joined = df_joined.dropna(subset=[&quot;total_shelter_avg&quot;])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="visualizing-housing-costs-and-homelessness-trends">
+<h2>Visualizing Housing Costs and Homelessness Trends<a class="headerlink" href="#visualizing-housing-costs-and-homelessness-trends" title="Link to this heading">#</a></h2>
+<p>To understand how housing affordability and homelessness evolve over time in New York City, I plot two separate monthly time-series. The first shows changes in median asking rent across NYC, and the second shows changes in the average number of individuals in homeless shelters for the same period.</p>
+<p>Plotting these trends side by side allows for a clear visual comparison of how both series move over time. While these graphs do not establish causality, they help reveal whether increases in rent coincide with changes in shelter population, providing initial insight into how housing costs may relate to homelessness patterns in the city.</p>
+<p>I also create a scatterplot to examine the association between the two variables directly. This visualization plots median rent against shelter population, allowing us to see whether higher rent levels correspond to increases in homelessness.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+
+#Median Rent Over Time
+axes[0].plot(df_joined[&quot;month&quot;], df_joined[&quot;median_rent&quot;], linewidth=2)
+axes[0].set_title(&quot;NYC Median Asking Rent Over Time&quot;)
+axes[0].set_xlabel(&quot;Month&quot;)
+axes[0].set_ylabel(&quot;Median Rent (USD)&quot;)
+axes[0].tick_params(axis=&quot;x&quot;, rotation=45)
+
+#Average Shelter Population Over Time
+axes[1].plot(df_joined[&quot;month&quot;], df_joined[&quot;total_shelter_avg&quot;], linewidth=2, color=&quot;orange&quot;)
+axes[1].set_title(&quot;NYC Average Monthly Shelter Population Over Time&quot;)
+axes[1].set_xlabel(&quot;Month&quot;)
+axes[1].set_ylabel(&quot;Shelter Population&quot;)
+axes[1].tick_params(axis=&quot;x&quot;, rotation=45)
+
+plt.tight_layout()
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/20206a24402408bdd53a56603c3f1983e1556eca46ac7977e8043f4f2ceea9cc.png" src="_images/20206a24402408bdd53a56603c3f1983e1556eca46ac7977e8043f4f2ceea9cc.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>plt.figure(figsize=(7, 5))
+
+# Scatter points
+plt.scatter(df_joined[&quot;median_rent&quot;], df_joined[&quot;total_shelter_avg&quot;], alpha=0.7)
+
+# Add Trendline
+x = df_joined[&quot;median_rent&quot;]
+y = df_joined[&quot;total_shelter_avg&quot;]
+
+# Fit a linear regression
+m, b = np.polyfit(x, y, 1)
+
+# Plot the line
+plt.plot(x, m*x + b, color=&quot;red&quot;, linewidth=2, label=&quot;Trendline&quot;)
+
+plt.title(&quot;Relationship Between Median Rent and Shelter Population&quot;, fontsize=13)
+plt.xlabel(&quot;Median Asking Rent&quot;)
+plt.ylabel(&quot;Average Monthly Shelter Population&quot;)
+plt.legend()
+plt.tight_layout()
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/daa0a2bb0e279894d1e9fede4f7a7dfa7120f506df3b21ea130c57db805184d3.png" src="_images/daa0a2bb0e279894d1e9fede4f7a7dfa7120f506df3b21ea130c57db805184d3.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span># Define X and y
+X = df_joined[&quot;median_rent&quot;]
+y = df_joined[&quot;total_shelter_avg&quot;]
+
+# Add constant for intercept
+X = sm.add_constant(X)
+
+# Fit linear regression
+model = sm.OLS(y, X).fit()
+
+model.summary()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><table class="simpletable">
+<caption>OLS Regression Results</caption>
+<tr>
+  <th>Dep. Variable:</th>    <td>total_shelter_avg</td> <th>  R-squared:         </th> <td>   0.673</td>
+</tr>
+<tr>
+  <th>Model:</th>                   <td>OLS</td>        <th>  Adj. R-squared:    </th> <td>   0.667</td>
+</tr>
+<tr>
+  <th>Method:</th>             <td>Least Squares</td>   <th>  F-statistic:       </th> <td>   111.4</td>
+</tr>
+<tr>
+  <th>Date:</th>             <td>Fri, 05 Dec 2025</td>  <th>  Prob (F-statistic):</th> <td>9.82e-15</td>
+</tr>
+<tr>
+  <th>Time:</th>                 <td>23:31:39</td>      <th>  Log-Likelihood:    </th> <td> -596.07</td>
+</tr>
+<tr>
+  <th>No. Observations:</th>      <td>    56</td>       <th>  AIC:               </th> <td>   1196.</td>
+</tr>
+<tr>
+  <th>Df Residuals:</th>          <td>    54</td>       <th>  BIC:               </th> <td>   1200.</td>
+</tr>
+<tr>
+  <th>Df Model:</th>              <td>     1</td>       <th>                     </th>     <td> </td>   
+</tr>
+<tr>
+  <th>Covariance Type:</th>      <td>nonrobust</td>     <th>                     </th>     <td> </td>   
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+       <td></td>          <th>coef</th>     <th>std err</th>      <th>t</th>      <th>P>|t|</th>  <th>[0.025</th>    <th>0.975]</th>  
+</tr>
+<tr>
+  <th>const</th>       <td>-4.472e+04</td> <td>  1.1e+04</td> <td>   -4.060</td> <td> 0.000</td> <td>-6.68e+04</td> <td>-2.26e+04</td>
+</tr>
+<tr>
+  <th>median_rent</th> <td>   33.5165</td> <td>    3.176</td> <td>   10.553</td> <td> 0.000</td> <td>   27.149</td> <td>   39.884</td>
+</tr>
+</table>
+<table class="simpletable">
+<tr>
+  <th>Omnibus:</th>       <td> 5.572</td> <th>  Durbin-Watson:     </th> <td>   0.087</td>
+</tr>
+<tr>
+  <th>Prob(Omnibus):</th> <td> 0.062</td> <th>  Jarque-Bera (JB):  </th> <td>   4.759</td>
+</tr>
+<tr>
+  <th>Skew:</th>          <td>-0.697</td> <th>  Prob(JB):          </th> <td>  0.0926</td>
+</tr>
+<tr>
+  <th>Kurtosis:</th>      <td> 3.309</td> <th>  Cond. No.          </th> <td>2.77e+04</td>
+</tr>
+</table><br/><br/>Notes:<br/>[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.<br/>[2] The condition number is large, 2.77e+04. This might indicate that there are<br/>strong multicollinearity or other numerical problems.</div></div>
+</div>
+</section>
+<section id="interpretation-of-results">
+<h2>Interpretation of Results<a class="headerlink" href="#interpretation-of-results" title="Link to this heading">#</a></h2>
+<p>The two time-series plots show how median asking rent and the average monthly shelter population have evolved over time in New York City. Median rent displays a generally upward trend, reflecting the city’s increasing housing costs. The shelter population also shows variation over time, with periods where the number of individuals in shelter rises alongside increases in rent.</p>
+<p>The scatterplot provides a direct view of the association between the two variables. The points suggest a positive relationship: higher median rent values tend to coincide with higher shelter populations. While this does not imply causation, it is consistent with the idea that rising housing costs may contribute to greater housing instability and increased reliance on the shelter system.</p>
+<p>Overall, the visual patterns indicate that changes in housing affordability and homelessness may be connected. Further analysis would be needed to establish a causal link, but these results provide initial descriptive evidence of a relationship between rent levels and shelter population in New York City.</p>
+</section>
+<section id="regression-model-interpretation">
+<h2>Regression Model interpretation<a class="headerlink" href="#regression-model-interpretation" title="Link to this heading">#</a></h2>
+<p>The regression model shows a strong and statistically significant relationship between median asking rent and the size of the homeless shelter population in New York City. The coefficient indicates that each $1 increase in median rent is associated with an increase of approximately 33 individuals in shelter, on average. This coefficient however, is not reliable as the model doesn’t account for omitted variables.  The model explains about 67% of the variation in shelter population, suggesting that housing costs are closely tied to homelessness trends in the city.</p>
+<p>However, the very sharp growth in shelter population after 2022 is likely influenced by additional factors not captured in this simple model, such as migration flows, economic conditions, and policy changes. Therefore, while rent levels appear to be an important predictor, they do not fully explain the rise in homelessness.</p>
+</section>
+<section id="limitations-of-the-model">
+<h2>Limitations of the Model<a class="headerlink" href="#limitations-of-the-model" title="Link to this heading">#</a></h2>
+<p>This regression is a simple, descriptive model and should be interpreted with caution. While it shows a strong association between median rent and shelter population, several important limitations remain:</p>
+<ol class="arabic simple">
+<li><p><strong>Omitted Variables and Confounders</strong>
+Because important factors that influence homelessness are omitted from the model, the estimated effect of median rent is likely biased and should not be interpreted as a precise causal relationship.</p></li>
+<li><p><strong>Time-Series Autocorrelation</strong>
+The Durbin–Watson statistic indicates serial correlation, which violates the assumptions of ordinary least squares. This means the regression’s standard errors and significance levels may not be fully reliable.</p></li>
+<li><p><strong>Causality Cannot Be Inferred</strong>
+This analysis is correlational. Although higher rents and higher homelessness levels move together, the model cannot determine whether increases in rent cause increases in homelessness. More rigorous causal methods or additional control variables would be required.</p></li>
+</ol>
+<p>Overall, the regression provides useful descriptive insight but should not be interpreted as a causal estimate. A more sophisticated model with additional variables would be needed to better understand the drivers of homelessness.</p>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>This analysis examined the relationship between median asking rent and the size of the homeless shelter population in New York City using monthly data. Both the visualizations and the regression results indicate a positive association. Periods of higher rent levels tend to coincide with higher shelter populations. While this relationship does not establish causality, the findings suggest that housing costs are closely aligned with homelessness trends in the city. Additional variables and more advanced modeling would be needed to better understand the underlying mechanisms, but these results provide initial evidence that affordability pressures may contribute to increased reliance on the shelter system.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Project_2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Project 2</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-prompt">Project Prompt</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-packages-and-import-data">Load Packages and Import Data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-cleaning-and-preparation">Data Cleaning and Preparation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visualizing-housing-costs-and-homelessness-trends">Visualizing Housing Costs and Homelessness Trends</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation-of-results">Interpretation of Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-model-interpretation">Regression Model interpretation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitations-of-the-model">Limitations of the Model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahmed
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
